@@ -1,8 +1,6 @@
 const FavouriteBeers = ({beers}) => {
 
-    // const favBeers = beers.map((beer) =>{
-    //     return <h1>{beer.name}</h1>
-    // })
+    
 
     return(
         <>

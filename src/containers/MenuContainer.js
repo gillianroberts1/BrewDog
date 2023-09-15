@@ -32,6 +32,13 @@ const onBeerSelected = (beer) => {
     setSelectedBeer(beer)
 }
 
+const handleBeerClick = (beer) => {
+    setSelectedBeer(beer)
+}
+
+
+
+
 
 const favouriteSelected = (beer) => {
     const newFavourites = [...favouriteBeers]
@@ -58,7 +65,7 @@ const handleSearch = (input) => {
 
         <h1>Menu Container</h1>
         <TitleBar beers={beers} onBeerSelected={onBeerSelected}/>
-        {selectedBeer.length ? <AllBeers beers={selectedBeer} /> : <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected}/>}
+        {selectedBeer.length ? <AllBeers beers={selectedBeer} handleButtonClick={handleBeerClick}/> : <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected}/>}
         
         <FavouriteBeers beers={favouriteBeers}/>
         
