@@ -6,8 +6,15 @@ const TitleBar = ({beers, onBeerSelected}) => {
             })
 
         const handleSelectChange = (event) => {
+            if (event.target.value === "all"){
+                onBeerSelected(beers)
+            } else{
             const chosenBeer = beers[event.target.value]
             onBeerSelected(chosenBeer)
+
+            }
+            
+            
         }
 
     
@@ -17,6 +24,7 @@ const TitleBar = ({beers, onBeerSelected}) => {
             <select defaultValue="" onChange={handleSelectChange}>
             <option value="" selected>Select option</option>
             {menuOptions}
+            <option value="all" >show all</option>
 
             </select>
             

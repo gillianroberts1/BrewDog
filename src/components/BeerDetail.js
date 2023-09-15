@@ -4,10 +4,11 @@ const BeerDetail = ({beer, newFavourites}) => {
         newFavourites(beer)
     }
 
+
     return(
         <div className="beer-detail">
-            <li>chosen beer is {beer.name}</li>
-            <li>description {beer.description}</li>
+            <p>{beer.name}</p>
+            <p>{beer.description}</p>
             <button onClick={handleButtonClick}>Add to Favourites</button>
 
 
