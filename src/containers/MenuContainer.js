@@ -4,11 +4,14 @@ import TitleBar from "../components/TitleBar"
 import BeerDetail from "../components/BeerDetail"
 import FavouriteBeers from "../components/FavouriteBeers"
 import AllBeers from "../components/AllBeers"
+import SearchBar from "../components/SearchBar"
 
 const MenuContainer = () => {
     const [beers, setBeers] =useState([])
     const [selectedBeer, setSelectedBeer] = useState([])
     const [favouriteBeers, setFavouriteBeers] = useState([])
+    
+
 
     useEffect(() => {
         getBeers()
@@ -36,10 +39,23 @@ const favouriteSelected = (beer) => {
     setFavouriteBeers(newFavourites)
 }
 
+const handleSearch = (input) => {
+    const results = beers.filter((beer) => {
+        return beer.name.toLowerCase().includes(input.toLowerCase())
+
+    })
+    setSelectedBeer(results)
+    
+}
 
 
     return(
         <>
+        <div className="search-bar-container">
+            <SearchBar handleSearch={handleSearch}/>
+            <div>Search results</div>
+        </div>
+
         <h1>Menu Container</h1>
         <TitleBar beers={beers} onBeerSelected={onBeerSelected}/>
         {selectedBeer.length ? <AllBeers beers={selectedBeer} /> : <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected}/>}
