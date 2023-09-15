@@ -2,10 +2,12 @@ import { useEffect, useState } from "react"
 // import Menu from "../components/Menu"
 import TitleBar from "../components/TitleBar"
 import BeerDetail from "../components/BeerDetail"
+import FavouriteBeers from "../components/FavouriteBeers"
 
 const MenuContainer = () => {
     const [beers, setBeers] =useState([])
     const [selectedBeer, setSelectedBeer] = useState("")
+    const [favouriteBeers, setFavouriteBeers] = useState("")
 
     useEffect(() => {
         getBeers()
@@ -27,7 +29,11 @@ const onBeerSelected = (beer) => {
 }
 
 
-
+const favouriteSelected = (beer) => {
+    const newFavourites = [...favouriteBeers]
+    newFavourites.push(beer)
+    setFavouriteBeers(newFavourites)
+}
 
 
 
@@ -35,8 +41,8 @@ const onBeerSelected = (beer) => {
         <>
         <h1>Menu Container</h1>
         <TitleBar beers={beers} onBeerSelected={onBeerSelected}/>
-        {selectedBeer? <BeerDetail beer={selectedBeer}/> : null}
-        
+        {selectedBeer ? <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected}/> : null}
+        <FavouriteBeers beers={favouriteBeers}/>
         
 
 
