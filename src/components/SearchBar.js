@@ -16,7 +16,7 @@ const SearchBar = ({handleSearch}) => {
         <div className="input-wrapper">
             <FaSearch id="search-icon"/>
 
-            <input placeholder="type to search..."
+            <input placeholder="Type to search..."
             value={input} 
             onChange={(event) => handleChange(event.target.value)}/>
             

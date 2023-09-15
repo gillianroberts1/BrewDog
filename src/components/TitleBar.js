@@ -23,8 +23,9 @@ const TitleBar = ({beers, onBeerSelected}) => {
             <h1>BrewDog Menu</h1>
             <select defaultValue="" onChange={handleSelectChange}>
             <option value="" selected>Select option</option>
+            <option value="all" >SHOW ALL</option>
             {menuOptions}
-            <option value="all" >show all</option>
+            
 
             </select>
             
