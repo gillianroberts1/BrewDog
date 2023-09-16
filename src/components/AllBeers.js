@@ -1,35 +1,24 @@
-import "./AllBeers.css"
-
+import "./AllBeers.css";
 
 const AllBeers = ({ beers, handleButtonClick }) => {
+  return (
+    <div className="all-beers-container">
+      {beers &&
+        beers.map((beer) => (
+          <button className="beer" onClick={() => handleButtonClick(beer)}>
+            <img className="small-img" src={beer.image_url} alt={beer.name} />
 
-    
+            <p className="beer-name">{beer.name} </p>
+            
+            
 
-    
-    return (
-        <>
-            {beers && beers.map(beer => (
-                <button className="beer" onClick={() => handleButtonClick(beer)}>
+            <p className="percent">
+              {beer.abv}
+              </p>
+          </button>
+        ))}
+    </div>
+  );
+};
 
-                    
-
-                    <p>{beer.name} </p>
-                   
-
-                    <p>{beer.abv}</p>
-                    
-                </button>
-                    
-            ))
-            }
-
-        </>
-
-
-    )
-
-
-}
-
-
-export default AllBeers
+export default AllBeers;

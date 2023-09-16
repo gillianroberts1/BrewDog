@@ -1,0 +1,41 @@
+@import url(https://db.onlinewebfonts.com/c/553e6a3ae81f5dd5d83a25f7275f77c2?family=New+Grotesk+Square+THREE+_WEB);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Montserrat:wght@500&family=Tektur:wght@500&display=swap");
+
+
+* {
+  font-family: "Inter";
+}
+
+
+img {
+  display: flex;
+  height: 400px;
+}
+
+
+
+.beer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  
+}
+
+.beer-card-detail,
+p {
+  text-align: center;
+}
+
+.beer-card-info-name {
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: "New Grotesk Square THREE _WEB";
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* display: flex; 
+    flex-direction: column;
+    opacity: 1;  */

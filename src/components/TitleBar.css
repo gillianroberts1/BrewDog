@@ -1,0 +1,10 @@
+.menu-container {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+}
+.title {
+    align-items: center;
+    font-size: 50px;
+    font-family: "New Grotesk Square THREE _WEB";
+}

@@ -1,10 +1,38 @@
-button.beer {
-    background: none;
-	color: inherit;
-	/* border: none; */
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-    
+.all-beers-container {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
 }
+
+
+button.beer {
+  background: none;
+  color: inherit;
+  padding: 25px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+
+
+.small-img {
+  height: 200px;
+
+
+}
+
+.percent::after {
+  content: "%";
+}
+
+.beer-name {
+  font-family: "New Grotesk Square THREE _WEB";  font-size: 25px;
+  text-transform: uppercase;
+}
+
