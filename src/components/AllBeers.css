@@ -2,13 +2,15 @@
   padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
+  gap: 10px;
+  margin: 200px;
 }
 
 
 button.beer {
-  background: none;
-  color: inherit;
+  background-color: rgb(245, 245, 245);
+  border: none;
+  border-radius: 10px;
   padding: 25px;
   font: inherit;
   cursor: pointer;
@@ -17,7 +19,9 @@ button.beer {
   justify-content: center;
   justify-items: center;
   
+  
 }
+
 
 
 
@@ -34,5 +38,9 @@ button.beer {
 .beer-name {
   font-family: "New Grotesk Square THREE _WEB";  font-size: 25px;
   text-transform: uppercase;
+  font-size: 40px;
 }
 
+.beer-tag {
+  text-transform: uppercase;
+}

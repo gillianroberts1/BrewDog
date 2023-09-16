@@ -59,7 +59,6 @@ const MenuContainer = () => {
           Search by name, year, abv, description
         </div>
       </div>
-
       <TitleBar beers={beers} onBeerSelected={onBeerSelected} />
       <div className="beer-container">
         {selectedBeer ? (
@@ -69,6 +68,7 @@ const MenuContainer = () => {
               handleButtonClick={handleBeerClick}
             />
           ) : (
+            
             <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected} />
           )
         ) : null}

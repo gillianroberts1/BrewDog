@@ -13,7 +13,7 @@
 
 .input-wrapper {
   background-color: white;
-  width: 100%;
+  width:30%;
   border-radius: 10px;
   height: 2.5rems;
   padding: 0 15px;
@@ -40,6 +40,7 @@ input:focus {
 }
 
 .search-instructions {
+  padding: 10px;
   font-size: 13px;
   font-style: italic;
 }
