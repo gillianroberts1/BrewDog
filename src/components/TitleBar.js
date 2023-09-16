@@ -1,15 +1,15 @@
 import "./TitleBar.css";
- 
+
 const TitleBar = ({ beers, onBeerSelected }) => {
   const menuOptions = beers.map((beer, index) => {
     return <option value={index}>{beer.name}</option>;
   });
 
-  const handleSelectChange = (event) => {
-    if (event.target.value === "all") {
+  const handleSelectChange = ({ target: { value } }) => {
+    if (value === "all") {
       onBeerSelected(beers);
     } else {
-      const chosenBeer = beers[event.target.value];
+      const chosenBeer = beers[value];
       onBeerSelected(chosenBeer);
     }
   };

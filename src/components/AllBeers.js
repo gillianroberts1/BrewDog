@@ -9,12 +9,8 @@ const AllBeers = ({ beers, handleButtonClick }) => {
             <img className="small-img" src={beer.image_url} alt={beer.name} />
 
             <p className="beer-name">{beer.name} </p>
-            
-            
 
-            <p className="percent">
-              {beer.abv}
-              </p>
+            <p className="percent">{beer.abv}</p>
           </button>
         ))}
     </div>

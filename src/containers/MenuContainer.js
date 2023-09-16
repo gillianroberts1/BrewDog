@@ -55,16 +55,23 @@ const MenuContainer = () => {
     <>
       <div className="search-bar-container">
         <SearchBar handleSearch={handleSearch} />
-        <div className="search-instructions">Search by name, year, abv, description</div>
+        <div className="search-instructions">
+          Search by name, year, abv, description
+        </div>
       </div>
 
       <TitleBar beers={beers} onBeerSelected={onBeerSelected} />
       <div className="beer-container">
-        {selectedBeer.length ? (
-          <AllBeers beers={selectedBeer} handleButtonClick={handleBeerClick} />
-        ) : (
-          <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected} />
-        )}
+        {selectedBeer ? (
+          selectedBeer.length ? (
+            <AllBeers
+              beers={selectedBeer}
+              handleButtonClick={handleBeerClick}
+            />
+          ) : (
+            <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected} />
+          )
+        ) : null}
       </div>
       <FavouriteBeers beers={favouriteBeers} />
     </>

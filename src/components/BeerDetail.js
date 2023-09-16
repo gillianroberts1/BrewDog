@@ -3,8 +3,6 @@ import "./BeerDetail.css";
 const BeerDetail = ({ beer, newFavourites }) => {
   const handleButtonClick = () => {
     newFavourites(beer);
-
-    
   };
 
   return (
