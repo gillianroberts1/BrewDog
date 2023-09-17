@@ -1,6 +1,6 @@
 import "./TitleBar.css";
-import logo from "../images/brewdoglogo.png"
-import background from "../images/bdbackground1.png"
+import logo from "../images/brewdoglogo-removebg-preview (1).png"
+
 
 
 

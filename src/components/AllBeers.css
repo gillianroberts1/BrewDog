@@ -1,15 +1,13 @@
 .all-beers-container {
   padding-top: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin: 200px;
-  background: white;
+  justify-content: center;
+  margin: 118px;
+  
   margin-top: 10px;
-  /* background-image: url("../images/bdbackground1.png");
-  background-repeat: no-repeat;
-  background-size: cover; */
-
+  
 }
 
 
@@ -51,9 +49,3 @@ button.beer {
   text-transform: uppercase;
 }
 
-body {
-  /* background-image: url("../images/bdbackground9.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-   */
-}

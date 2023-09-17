@@ -7,9 +7,12 @@
 }
 
 
-img {
+.beer-card-image {
   display: flex;
-  height: 400px;
+  justify-content: center;
+  height: 300px;
+  background-color: rgb(245, 245, 245);
+  padding: 30px 643px;
 }
 
 
@@ -25,6 +28,12 @@ img {
 .beer-card-detail,
 p {
   text-align: center;
+  
+}
+
+.beer-card-info {
+  width: 450px;
+  
 }
 
 .beer-card-info-name {
@@ -40,11 +49,14 @@ p {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
+  position: absolute;
 }
 
 .description-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 450px;
 }
 
 .toggle-button {
@@ -54,6 +66,7 @@ p {
   cursor: pointer;
   outline: none;
   margin-right: 10px; 
+  
 
 }
 
@@ -70,4 +83,12 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.fav-btn {
+  display: inline-flex;
+  margin-top: 20px;
+
+  
+
 }

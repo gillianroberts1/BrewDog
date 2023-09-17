@@ -18,7 +18,10 @@ const MenuContainer = () => {
   const getBeers = function () {
     fetch("https://api.punkapi.com/v2/beers")
       .then((res) => res.json())
-      .then((beers) => setBeers(beers))
+      .then((beers) => {
+        setBeers(beers);
+        setSelectedBeer(beers);
+      })
       .catch((err) => console.error(`Loading menu error: ${err}`));
   };
 
