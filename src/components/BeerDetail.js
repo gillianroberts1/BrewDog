@@ -7,7 +7,6 @@ const BeerDetail = ({ beer, newFavourites }) => {
 
   const getFoodPairings = () => {
     const pairings = beer.food_pairing;
-    console.log(pairings);
     const foods = pairings.map((food) => <li key={food}>{food}</li>);
 
     return <ul>{foods}</ul>;

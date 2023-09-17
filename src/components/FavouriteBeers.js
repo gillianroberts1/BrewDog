@@ -1,9 +1,18 @@
+import "./FavouriteBeers.css";
+
 const FavouriteBeers = ({ beers }) => {
   return (
-    <>
-      <h1>Shopping Basket</h1>
-      {beers && beers.map((beer) => <p>{beer.name}</p>)}
-    </>
+    <div className="shopping-basket">
+      {beers.length ? (
+        <ul>
+          {beers.map((beer) => (
+            <li>{beer.name}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="empty-basket">Nothing yet...</p>
+      )}
+    </div>
   );
 };
 

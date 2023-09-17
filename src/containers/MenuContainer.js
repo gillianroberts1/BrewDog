@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { GrBasket } from "react-icons/gr";
 import TitleBar from "../components/TitleBar";
 import BeerDetail from "../components/BeerDetail";
 import FavouriteBeers from "../components/FavouriteBeers";
@@ -10,6 +11,7 @@ const MenuContainer = () => {
   const [beers, setBeers] = useState([]);
   const [selectedBeer, setSelectedBeer] = useState([]);
   const [favouriteBeers, setFavouriteBeers] = useState([]);
+  const [basketIsOpen, setBasketIsOpen] = useState(false);
 
   useEffect(() => {
     getBeers();
@@ -56,12 +58,24 @@ const MenuContainer = () => {
 
   return (
     <>
-      <div className="search-bar-container">
-        <SearchBar handleSearch={handleSearch} />
-        <div className="search-instructions">
-          Search by name, year, abv, description
+      <div className="header">
+        <div>
+          <button
+            className="basket"
+            onClick={() => setBasketIsOpen(!basketIsOpen)}
+          >
+            <GrBasket id="gr-basket" />
+          </button>
+          {basketIsOpen && <FavouriteBeers beers={favouriteBeers} />}
+        </div>
+        <div className="search-bar-container">
+          <SearchBar handleSearch={handleSearch} />
+          <p className="search-instructions">
+            Search by name, year, abv, description
+          </p>
         </div>
       </div>
+
       <TitleBar beers={beers} onBeerSelected={onBeerSelected} />
       <div className="beer-container">
         {selectedBeer ? (
@@ -75,7 +89,6 @@ const MenuContainer = () => {
           )
         ) : null}
       </div>
-      <FavouriteBeers beers={favouriteBeers} />
     </>
   );
 };
