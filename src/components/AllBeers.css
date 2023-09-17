@@ -4,6 +4,12 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin: 200px;
+  background: white;
+  margin-top: 10px;
+  /* background-image: url("../images/bdbackground1.png");
+  background-repeat: no-repeat;
+  background-size: cover; */
+
 }
 
 
@@ -43,4 +49,11 @@ button.beer {
 
 .beer-tag {
   text-transform: uppercase;
+}
+
+body {
+  /* background-image: url("../images/bdbackground9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+   */
 }

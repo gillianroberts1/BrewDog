@@ -1,4 +1,8 @@
 import "./TitleBar.css";
+import logo from "../images/brewdoglogo.png"
+import background from "../images/bdbackground1.png"
+
+
 
 const TitleBar = ({ beers, onBeerSelected }) => {
   const menuOptions = beers.map((beer, index) => {
@@ -16,7 +20,9 @@ const TitleBar = ({ beers, onBeerSelected }) => {
 
   return (
     <div className="menu-container">
-      {/* <img className="logo" src="" alt="logo"/> */}
+      <img id="logo" src={logo} alt="Logo"/>
+      {/* <img id="background-img" src={background} alt="background"/> */}
+      
       <h1 className="title">BREWDOG MENU</h1>
       <hr className="break"></hr>
 

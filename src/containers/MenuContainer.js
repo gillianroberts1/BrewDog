@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-// import Menu from "../components/Menu"
 import TitleBar from "../components/TitleBar";
 import BeerDetail from "../components/BeerDetail";
 import FavouriteBeers from "../components/FavouriteBeers";
 import AllBeers from "../components/AllBeers";
 import SearchBar from "../components/SearchBar";
+// import Header from "../components/Header";
 
 const MenuContainer = () => {
   const [beers, setBeers] = useState([]);
@@ -68,7 +68,6 @@ const MenuContainer = () => {
               handleButtonClick={handleBeerClick}
             />
           ) : (
-            
             <BeerDetail beer={selectedBeer} newFavourites={favouriteSelected} />
           )
         ) : null}
