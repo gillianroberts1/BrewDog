@@ -2,14 +2,27 @@ import { useState } from "react";
 import "./BeerDetail.css";
 
 const BeerDetail = ({ beer, newFavourites }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [isPairingExpanded, setPairingExpanded] = useState(false);
+
+  const getFoodPairings = () => {
+    const pairings = beer.food_pairing;
+    console.log(pairings);
+    const foods = pairings.map((food) => <li key={food}>{food}</li>);
+
+    return <ul>{foods}</ul>;
+  };
 
   const handleButtonClick = () => {
     newFavourites(beer);
   };
 
-  const toggleExpanded = () => {
-    setIsExpanded(!isExpanded);
+  const toggleDescriptionExpanded = () => {
+    setIsDescriptionExpanded(!isDescriptionExpanded);
+  };
+
+  const toggleFoodPairingExpanded = () => {
+    setPairingExpanded(!isPairingExpanded);
   };
 
   return (
@@ -28,21 +41,37 @@ const BeerDetail = ({ beer, newFavourites }) => {
 
         <p>{beer.tagline}</p>
         <p>{beer.first_brewed}</p>
-
-        <div className="description-container">
-          <p>Description</p>
-          {beer ? (
-            <button onClick={toggleExpanded}>{isExpanded ? "-" : "+"}</button>
-          ) : null}
-        </div>
-
-        {isExpanded && (
-          <div className="beer-card-description">
-            <p>{beer.description}</p>
-          </div>
-        )}
       </div>
+
+      <div className="description-container">
+        <p>Description</p>
+        {beer ? (
+          <button onClick={toggleDescriptionExpanded}>
+            {isDescriptionExpanded ? "-" : "+"}
+          </button>
+        ) : null}
+      </div>
+
+      {isDescriptionExpanded && (
+        <div className="beer-card-description">
+          <p className="description-box">{beer.description}</p>
+        </div>
+      )}
+
+      <div className="pairings-container">
+        <p>Food Pairings</p>
+        {beer ? (
+          <button onClick={toggleFoodPairingExpanded}>
+            {isPairingExpanded ? "-" : "+"}
+          </button>
+        ) : null}
+      </div>
+
+      {isPairingExpanded && (
+        <div className="beer-card-pairings">{getFoodPairings()}</div>
+      )}
     </article>
   );
 };
+
 export default BeerDetail;

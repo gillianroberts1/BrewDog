@@ -17,6 +17,8 @@
   padding: 25px 0;
 }
 
+
+
 .beer-card-image {
   display: flex;
   justify-content: center;
@@ -62,6 +64,17 @@ p {
   width: 450px;
 }
 
+.pairings-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+}
+
+.description-box {
+  width: 410px;
+}
+
 .toggle-button {
   background-color: transparent;
   border: none;
@@ -81,6 +94,7 @@ button {
   cursor: pointer;
   background: none  ;
   font-size: 20px;
+  border-radius: 25%;
 }
 
 button:hover {
@@ -90,4 +104,7 @@ button:hover {
 .fav-btn {
   display: inline-flex;
   margin-top: 20px;
+  font-size: 15px;
+  border: none; 
+  border-radius:10px;
 }

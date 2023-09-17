@@ -3,7 +3,11 @@ import logo from "../images/brewdoglogo-removebg-preview (1).png";
 
 const TitleBar = ({ beers, onBeerSelected }) => {
   const menuOptions = beers.map((beer, index) => {
-    return <option value={index}>{beer.name}</option>;
+    return (
+      <option value={index} key={beer.name}>
+        {beer.name}
+      </option>
+    );
   });
 
   const handleSelectChange = ({ target: { value } }) => {
@@ -19,19 +23,14 @@ const TitleBar = ({ beers, onBeerSelected }) => {
     <div className="menu-container">
       <div className="hero">
         <img id="logo" src={logo} alt="Logo" />
-        {/* <img id="background-img" src={background} alt="background"/> */}
 
         <h1 className="title">BREWDOG MENU</h1>
       </div>
       <hr className="break"></hr>
 
       <select defaultValue="" onChange={handleSelectChange}>
-        <option value="" selected>
-          Select Beer
-        </option>
-        <option value="all">
-          <b>Shop Entire Range</b>
-        </option>
+        <option value="">Select Beer</option>
+        <option value="all">Shop Entire Range</option>
         {menuOptions}
       </select>
       <hr className="break"></hr>
