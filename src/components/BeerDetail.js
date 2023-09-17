@@ -1,8 +1,15 @@
+import { useState } from "react";
 import "./BeerDetail.css";
 
 const BeerDetail = ({ beer, newFavourites }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const handleButtonClick = () => {
     newFavourites(beer);
+  };
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
   };
 
   return (
@@ -15,9 +22,25 @@ const BeerDetail = ({ beer, newFavourites }) => {
         </p>
         <p>{beer.tagline}</p>
         <p>{beer.first_brewed}</p>
-        <p>{beer.description}</p>
+        
 
-        <button onClick={handleButtonClick}>Add to Basket</button>
+<div className="description-container">
+  <p>Description</p>
+        {beer ?  (
+          <button onClick={toggleExpanded}>
+            {isExpanded ? "-" : "+"}
+            </button>
+          
+        ) : null}
+        </div>
+
+        {isExpanded && (
+          <div className="beer-card-description">
+            <p>{beer.description}</p>
+          </div>
+        )}
+
+        <button className="fav-btn" onClick={handleButtonClick}>Add to Basket</button>
       </div>
     </article>
   );

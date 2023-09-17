@@ -36,3 +36,38 @@ p {
   font-weight: bold;
 }
 
+.expandable-content {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.description-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px; 
+
+}
+
+.beer-card-description {
+  margin-top: 10px;
+}
+
+button {
+  
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
