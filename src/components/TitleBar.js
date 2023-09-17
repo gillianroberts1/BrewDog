@@ -1,8 +1,5 @@
 import "./TitleBar.css";
-import logo from "../images/brewdoglogo-removebg-preview (1).png"
-
-
-
+import logo from "../images/brewdoglogo-removebg-preview (1).png";
 
 const TitleBar = ({ beers, onBeerSelected }) => {
   const menuOptions = beers.map((beer, index) => {
@@ -20,15 +17,15 @@ const TitleBar = ({ beers, onBeerSelected }) => {
 
   return (
     <div className="menu-container">
-      <img id="logo" src={logo} alt="Logo"/>
-      {/* <img id="background-img" src={background} alt="background"/> */}
-      
-      <h1 className="title">BREWDOG MENU</h1>
+      <div className="hero">
+        <img id="logo" src={logo} alt="Logo" />
+        {/* <img id="background-img" src={background} alt="background"/> */}
+
+        <h1 className="title">BREWDOG MENU</h1>
+      </div>
       <hr className="break"></hr>
 
-      
       <select defaultValue="" onChange={handleSelectChange}>
-
         <option value="" selected>
           Select Beer
         </option>
@@ -38,7 +35,6 @@ const TitleBar = ({ beers, onBeerSelected }) => {
         {menuOptions}
       </select>
       <hr className="break"></hr>
-
     </div>
   );
 };

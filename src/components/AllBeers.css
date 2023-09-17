@@ -1,15 +1,11 @@
 .all-beers-container {
-  padding-top: 40px;
+  padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   justify-content: center;
-  margin: 118px;
-  
   margin-top: 10px;
-  
 }
-
 
 button.beer {
   background-color: rgb(245, 245, 245);
@@ -22,17 +18,10 @@ button.beer {
   display: grid;
   justify-content: center;
   justify-items: center;
-  
-  
 }
-
-
-
 
 .small-img {
   height: 200px;
-
-
 }
 
 .percent::after {
@@ -40,7 +29,8 @@ button.beer {
 }
 
 .beer-name {
-  font-family: "New Grotesk Square THREE _WEB";  font-size: 25px;
+  font-family: "New Grotesk Square THREE _WEB";
+  font-size: 25px;
   text-transform: uppercase;
   font-size: 40px;
 }
@@ -48,4 +38,3 @@ button.beer {
 .beer-tag {
   text-transform: uppercase;
 }
-

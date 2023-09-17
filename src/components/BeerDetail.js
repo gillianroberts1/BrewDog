@@ -14,9 +14,12 @@ const BeerDetail = ({ beer, newFavourites }) => {
 
   return (
     <article className="beer-card">
-
-      <img className="beer-card-image" src={beer.image_url} alt={beer.name} />
-      <button className="fav-btn" onClick={handleButtonClick}>Add to Basket</button>
+      <div className="beer-card-image-container">
+        <img className="beer-card-image" src={beer.image_url} alt={beer.name} />
+      </div>
+      <button className="fav-btn" onClick={handleButtonClick}>
+        Add to Basket
+      </button>
 
       <div className="beer-card-info">
         <p className="beer-card-info-name">
@@ -25,18 +28,12 @@ const BeerDetail = ({ beer, newFavourites }) => {
 
         <p>{beer.tagline}</p>
         <p>{beer.first_brewed}</p>
-        
 
-        
-
-<div className="description-container">
-  <p>Description</p>
-        {beer ?  (
-          <button onClick={toggleExpanded}>
-            {isExpanded ? "-" : "+"}
-            </button>
-          
-        ) : null}
+        <div className="description-container">
+          <p>Description</p>
+          {beer ? (
+            <button onClick={toggleExpanded}>{isExpanded ? "-" : "+"}</button>
+          ) : null}
         </div>
 
         {isExpanded && (
@@ -44,7 +41,6 @@ const BeerDetail = ({ beer, newFavourites }) => {
             <p>{beer.description}</p>
           </div>
         )}
-
       </div>
     </article>
   );
